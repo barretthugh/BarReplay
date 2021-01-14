@@ -12,7 +12,7 @@ const http = require( "http" ),
   dl = require( 'datalib' );
 const redisOptions = {
   port: 6379,
-  host: '172.16.254.232',
+  host: 'redis',
   detect_buffers: true,
   socket_keepalive: true
 };
