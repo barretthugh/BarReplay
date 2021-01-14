@@ -1,0 +1,82 @@
+{
+  "_from": "socketio-file-upload",
+  "_id": "socketio-file-upload@0.7.3",
+  "_inBundle": false,
+  "_integrity": "sha512-JUvzi8Vvp2+GBfQtOehPSfecetZOo4g1JTl6+zmKhPiljn+z09lLL8zYeX4AJVSNpmRkGJnypbHkiPjPSkk5UA==",
+  "_location": "/socketio-file-upload",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "socketio-file-upload",
+    "name": "socketio-file-upload",
+    "escapedName": "socketio-file-upload",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/socketio-file-upload/-/socketio-file-upload-0.7.3.tgz",
+  "_shasum": "fb71599a4cab3f27d1bf7dbbbfd6149170ad44e2",
+  "_spec": "socketio-file-upload",
+  "_where": "/Users/barrett/Documents/Development/socketio/test/file-upload",
+  "author": {
+    "name": "Shane Carr",
+    "email": "shane.carr@wustl.edu"
+  },
+  "browser": "client.js",
+  "bugs": {
+    "url": "https://github.com/sffc/socketio-file-upload/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Uploads files to a Node.JS server using Socket.IO",
+  "devDependencies": {
+    "browserify": "^16.5.1",
+    "buffer-equals": "^1.0.3",
+    "chrome-location": "^1.2.1",
+    "concat-stream": "^1.6.2",
+    "ecstatic": "^4.1.4",
+    "eslint": "^5.16.0",
+    "google-closure-compiler": "^20181028.0.1",
+    "phantom": "^6.3.0",
+    "socket.io": "=2.1.1",
+    "socket.io-client": "=2.1.1",
+    "tape": "^4.13.3"
+  },
+  "files": [
+    "client.js",
+    "client.min.js",
+    "server.js",
+    "README.md"
+  ],
+  "homepage": "https://github.com/sffc/socketio-file-upload",
+  "keywords": [
+    "upload",
+    "uploader",
+    "socket",
+    "socket.io"
+  ],
+  "license": "X11",
+  "main": "server.js",
+  "name": "socketio-file-upload",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sffc/socketio-file-upload.git"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "minify": "npm run minify:compile && npm run minify:license && npm run minify:move",
+    "minify:compile": "google-closure-compiler --js=client.js --js_output_file=client.min.js.tmp",
+    "minify:license": "echo \"$(head -n5 client.min.js)\n$(cat client.min.js.tmp)\" > client.min.js.tmp",
+    "minify:move": "mv client.min.js.tmp client.min.js",
+    "pretest": "browserify test/serve/browser-file-transfer.js -o test/serve/bundle.js",
+    "start": "node server.js",
+    "test": "tape test/*.js"
+  },
+  "version": "0.7.3"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "BarReplay",
+  "version": "1.0.0",
+  "license": "ISC",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "datalib": "^1.9.3",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "mime": "^2.4.7",
+    "path": "^0.12.7",
+    "redis": "^3.0.2",
+    "socket.io": "^3.0.5",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {}
+}

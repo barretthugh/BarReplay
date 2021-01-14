@@ -1,0 +1,17 @@
+version: '3'
+services:
+  barreplay:
+    image: barreplay
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - "8089:8089"
+    restart: always
+
+  redis:
+    image: redis:6.0.1
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - "6379:6379"
+    restart: always
