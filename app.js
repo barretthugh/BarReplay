@@ -10,16 +10,20 @@ const http = require( "http" ),
   express = require( "express" ),
   redis = require( "redis" ),
   dl = require( 'datalib' );
+
 const redisOptions = {
   port: 6379,
   host: 'redis',
   detect_buffers: true,
   socket_keepalive: true
 };
+
 const redisClient = redis.createClient( redisOptions );
+
 redisClient.on( "error", function ( error ) {
   console.error( error );
 } );
+
 let app,
   io;
 // Simple Static File Server.  Used under the terms of the BSD license.

@@ -106,7 +106,7 @@ require( [
       codes = document
         .querySelector( '#codes' )
         .value
-        .replace( ' ', '' )
+        .replace( / /g, '' )
         .replace( '，', ',' )
         .split( ',' );
       intervalSec = Number.parseInt( document.querySelector( '#interval-sec' ).value );
